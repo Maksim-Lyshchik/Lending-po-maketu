@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+body { 
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 11px;
+    margin: 0;
+}
+body * {
+    box-sizing: border-box;
+}
+.button {
+    background: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    outline: 0;
+    border: 0;
+    padding: 13px 33px;
+    color:white;
+    text-transform: uppercase;
+    font-style: italic;
+    cursor: pointer;
+}
+.header {
+    background-color:#131313;
+}
+.container {
+    max-width: 1256px;
+    margin: 0 auto; 
+}
+.header-content {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 1440px;
+    height: 83px;
+    margin: 0 auto;
+}
+.header-navigation {
+    list-style: none;
+    display: flex;
+}
+.header-navigation__item {
+    margin: 47px;
+}
+.header-navigation__link {
+    text-decoration: none;
+    color: white;
+}
+.text-logo {
+    line-height: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: #E3B873;
+    text-transform: uppercase;
+}
+.text-telefon {
+    font-size: 11px;
+    line-height: 15px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #E3B873;
+}
+.part_1 {
+    background-image: url('../images/image 1.1.jpg');
+    background-size: cover;
+    height: 707px;
+    padding-top: 194px;
+    position: relative;
+}
+.part_1-shadow {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.part_1-container {
+    position: relative;
+    z-index: 1;
+
+}
+.title {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 53px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    height: 105px;
+    margin: 0;
+}
+.title-h1 {
+    color: #E3B873;
+}
+.subtitle {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+.p1 {
+    width: 504px;
+}
+.button_p1 {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #FFFFFF;
+    margin-right: 20px;
+}
+
