@@ -1001,3 +1001,12 @@ body * {
         height: 1200px;
     }
 }
+@media (min-width: 772px) {
+    .button {
+        width: 30vw;
+    }
+    .form {
+        display: flex;
+        align-items: center;
+    }
+}
