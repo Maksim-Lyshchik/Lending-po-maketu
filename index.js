@@ -1,24 +1,27 @@
 let images = [{
-    src: "images/image 0.jpg"
+    src: "images/image 0.jpg",
+    title: "Rostov-on-Don, Admiral"
   }, {
-    src: "images/image 1.jpg"
+    src: "images/image 1.jpg",
+    title: "Sochi Thieve"
   }, {
-    src: "images/image 2.jpg"
+    src: "images/image 2.jpg",
+    title: "Rostov-on-Don Patriotic"
   }];
 
 function initSlider(options) {
   if (!images || !images.length) return;
   
   options = options || {
-    titles: false,
+    titles: fals,
     dots: true,
-    autoplay: false
   };
   
   let sliderImages = document.querySelector(".slider_photo");
   let sliderArrows = document.querySelector(".slider");
   let sliderDots = document.querySelector(".slider__dots");
-  
+  let sliderTitle = document.querySelector(".part_2_navigation");
+
   initImages();
   initArrows();
   
@@ -29,11 +32,7 @@ function initSlider(options) {
   if (options.titles) {
     initTitles();
   }
-  
-  if (options.autoplay) {
-    initAutoplay();
-  }
-  
+    
   function initImages() {
     images.forEach((image, index) => {
       let imageDiv = `<div class="image n${index} ${index === 0? "active" : ""}" style="background-image: url('images/image ${[index]}.jpg')" data-index="${index}"></div>`;
@@ -75,42 +74,28 @@ function initSlider(options) {
       sliderDots.querySelector(".active").classList.remove("active");
       sliderDots.querySelector(".n" + num).classList.add("active");
     }
-    if (options.titles) changeTitle(num);
-  }
-  
-  function initTitles() {
-    let titleDiv = `<div class="slider_photo-title">${images[0].title}</div>`;
-    sliderImages.innerHTML += cropTitle(titleDiv, 50);
-  }
-  
-  function changeTitle(num) {
-    if (!images[num].title) return;
-    let sliderTitle = sliderImages.querySelector(".slider_photo-title");
-    sliderTitle.innerText = cropTitle(images[num].title, 50);
-  }
-  
-  function cropTitle(title, size) {
-    if (title.length <= size) {
-      return title;
-    } else {
-      return title.substr(0, size) + "...";
+    if (options.titles) {
+      sliderTitle.querySelector(".active_titl").classList.remove("active_titl");
+      sliderTitle.querySelector(".n" + num).classList.add("active_titl");
     }
   }
   
-  function initAutoplay() {
-    setInterval(() => {
-      let curNumber = +sliderImages.querySelector(".active").dataset.index;
-      let nextNumber = curNumber === images.length - 1? 0 : curNumber + 1;
-      moveSlider(nextNumber);
-    }, options.autoplayInterval);
+  function initTitles() {
+    images.forEach((image, index) => {
+      let titlSlid = `<li class="navigation_p2 n${index} ${index === 0? " active_titl" : ""}" data-index="${index}">${images[index].title}</li>`;
+      sliderTitle.innerHTML += titlSlid;
+    });
+    sliderTitle.querySelectorAll(".navigation_p2").forEach(titlSlid => {
+      titlSlid.addEventListener("click", function() {
+        moveSlider(this.dataset.index);
+      })
+    })
   }
 }
 
 let sliderOptions = {
   dots: true,
-  titles: false,
-  autoplay: false,
-  autoplayInterval: 5000
+  titles: true
 };
 
 document.addEventListener("DOMContentLoaded", function() {

@@ -143,6 +143,8 @@ body * {
     padding: 0;
     justify-content: flex-end;
 }
+
+
 .navigation_p2 {
     font-family: Yeseva One;
     font-style: normal;
@@ -153,7 +155,7 @@ body * {
     color: rgba(255, 255, 255, 0.3);
     margin: 0px 30px 53px 20px;
 }
-.navigation_p2:hover {
+.active_titl {
     color: #E3B873;
     cursor: pointer;
     text-decoration: underline;
