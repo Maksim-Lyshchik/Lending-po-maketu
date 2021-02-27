@@ -1,6 +1,6 @@
 let images = [{
     src: "images/image 0.jpg",
-    title: "Rostov-on-Don, Admiral",
+    title: "Rostov-on-Don Admiral",
     area: "81 m2",
     time: "3.5 months",
     cost: "Upon request"
@@ -128,7 +128,7 @@ function initSlider(options) {
 
   function initText() {
     images.forEach((image, index) => {
-      let t_City = `<spav class="subtitle s2 t${index} ${index === 0? " active_text" : ""}" data-index="${index}">${images[index].title}</span>`;
+      let t_City = `<spav class="subtitle s2 s2_1 t${index} ${index === 0? " active_text" : ""}" data-index="${index}">${images[index].title}</span>`;
       textCity.innerHTML += t_City;
 
       let t_Area = `<spav class="subtitle s2 t${index} ${index === 0? " active_text" : ""}" data-index="${index}">${images[index].area}</span>`;

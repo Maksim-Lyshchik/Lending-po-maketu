@@ -195,6 +195,9 @@ body * {
     opacity: 0;
     position: absolute;
 }
+.s2_1 {
+    max-width: 100px;
+}
 .active_text {
     opacity: 1;
 }
